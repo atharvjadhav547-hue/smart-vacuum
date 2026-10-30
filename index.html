@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="pageTitle">Smart Vacuum</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="app-header">
+
+    <div class="robot-icon">🤖</div>
+
+    <div>
+        <h1 id="robotName">Smart Vacuum</h1>
+        <p>Intelligent Cleaning Assistant</p>
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- Welcome -->
+
+    <section class="welcome-card">
+
+        <div>
+            <span class="online-badge">● ONLINE</span>
+
+            <h2>Ready to Clean</h2>
+
+            <p>
+                Your smart vacuum is ready for
+                automatic cleaning.
+            </p>
+        </div>
+
+        <div class="robot-display">
+            🤖
+        </div>
+
+    </section>
+
+
+    <!-- Battery -->
+
+    <section class="battery-card">
+
+        <div class="battery-top">
+
+            <div>
+                <span class="label">🔋 Battery</span>
+                <strong id="battery">85%</strong>
+            </div>
+
+            <span class="battery-state">Good</span>
+
+        </div>
+
+        <div class="battery-bar">
+            <div class="battery-fill"></div>
+        </div>
+
+    </section>
+
+
+    <!-- Robot Information -->
+
+    <section class="info-card">
+
+        <h2>Robot Information</h2>
+
+        <div class="info-line">
+
+            <span>
+                📶
+                <b>Wi-Fi</b>
+            </span>
+
+            <strong class="connected">
+                Connected
+            </strong>
+
+        </div>
+
+
+        <div class="info-line">
+
+            <span>
+                🧹
+                <b>Vacuum</b>
+            </span>
+
+            <strong id="vacuumStatus" class="off">
+                OFF
+            </strong>
+
+        </div>
+
+
+        <div class="info-line">
+
+            <span>
+                🚧
+                <b>Obstacle Sensor</b>
+            </span>
+
+            <strong id="obstacleStatus" class="clear">
+                Clear
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quick Actions -->
+
+    <section class="actions-section">
+
+        <h2>Quick Actions</h2>
+
+
+        <a href="cleaning.html" class="action-card blue">
+
+            <div class="action-icon">🧹</div>
+
+            <div>
+                <strong>Cleaning</strong>
+                <p>Start automatic cleaning</p>
+            </div>
+
+            <span class="arrow">›</span>
+
+        </a>
+
+
+        <a href="control.html" class="action-card purple">
+
+            <div class="action-icon">🎮</div>
+
+            <div>
+                <strong>Control Robot</strong>
+                <p>Move your robot manually</p>
+            </div>
+
+            <span class="arrow">›</span>
+
+        </a>
+
+
+        <a href="sensors.html" class="action-card green">
+
+            <div class="action-icon">📡</div>
+
+            <div>
+                <strong>View Sensors</strong>
+                <p>Check robot sensors</p>
+            </div>
+
+            <span class="arrow">›</span>
+
+        </a>
+
+
+        <a href="settings.html" class="action-card orange">
+
+            <div class="action-icon">⚙️</div>
+
+            <div>
+                <strong>Settings</strong>
+                <p>Customize your robot</p>
+            </div>
+
+            <span class="arrow">›</span>
+
+        </a>
+
+    </section>
+
+
+    <!-- Smart Tip -->
+
+    <section class="tip-card">
+
+        <span>💡</span>
+
+        <div>
+
+            <strong>Smart Cleaning Tip</strong>
+
+            <p>
+                Keep the robot's sensors clean for
+                better obstacle detection.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    🤖 Smart Vacuum • 2026
+
+</footer>
+
+
+<script>
+
+    // ==========================
+    // ROBOT NAME
+    // ==========================
+
+    const savedName = localStorage.getItem("robotName");
+
+    if (savedName) {
+
+        document.getElementById("robotName").textContent =
+            savedName;
+
+        document.getElementById("pageTitle").textContent =
+            savedName;
+    }
+
+
+    // ==========================
+    // VACUUM STATUS
+    // ==========================
+
+    const savedVacuum =
+        localStorage.getItem("vacuumStatus");
+
+
+    if (savedVacuum === "ON") {
+
+        document.getElementById("vacuumStatus").textContent =
+            "ON";
+
+        document.getElementById("vacuumStatus").className =
+            "on";
+
+    } else {
+
+        document.getElementById("vacuumStatus").textContent =
+            "OFF";
+
+        document.getElementById("vacuumStatus").className =
+            "off";
+    }
+
+</script>
+
+</body>
+
+</html>

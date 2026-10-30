@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+main {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.setting-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}

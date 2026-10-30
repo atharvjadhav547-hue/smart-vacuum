@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+main {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.sensor-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.sensor-card p {
+    font-size: 18px;
+}

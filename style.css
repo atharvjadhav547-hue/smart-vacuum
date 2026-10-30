@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(135deg, #eef2ff, #ecfeff, #fdf2f8);
+
+    color: #172033;
+
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.app-header {
+
+    background:
+        linear-gradient(135deg, #312e81, #2563eb, #0891b2);
+
+    color: white;
+
+    padding: 25px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+.robot-icon {
+
+    width: 62px;
+    height: 62px;
+
+    background: rgba(255,255,255,0.18);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+}
+
+
+.app-header h1 {
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.app-header p {
+
+    color: #dbeafe;
+
+    font-size: 14px;
+}
+
+
+/* MAIN */
+
+main {
+
+    max-width: 620px;
+
+    margin: auto;
+
+    padding: 20px;
+}
+
+
+/* WELCOME CARD */
+
+.welcome-card {
+
+    background:
+        linear-gradient(135deg, #4f46e5, #7c3aed, #2563eb);
+
+    color: white;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 15px 35px rgba(79,70,229,0.25);
+
+    margin-bottom: 18px;
+}
+
+
+.welcome-card h2 {
+
+    font-size: 25px;
+
+    margin: 12px 0 8px;
+}
+
+
+.welcome-card p {
+
+    color: #e0e7ff;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.online-badge {
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.robot-display {
+
+    font-size: 70px;
+
+    animation: floating 2.5s infinite ease-in-out;
+}
+
+
+@keyframes floating {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* BATTERY */
+
+.battery-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.07);
+
+    border-left: 6px solid #22c55e;
+}
+
+
+.battery-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+}
+
+
+.label {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.battery-top strong {
+
+    font-size: 24px;
+
+    color: #16a34a;
+}
+
+
+.battery-state {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.battery-bar {
+
+    height: 10px;
+
+    background: #dcfce7;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.battery-fill {
+
+    width: 85%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(90deg, #22c55e, #84cc16);
+
+    border-radius: 20px;
+}
+
+
+/* ROBOT INFORMATION */
+
+.info-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.07);
+}
+
+
+.info-card h2 {
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.info-line {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 17px 4px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+
+.info-line:last-child {
+
+    border-bottom: none;
+}
+
+
+.info-line span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.info-line strong {
+
+    font-size: 13px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+}
+
+
+.connected {
+
+    color: #15803d;
+
+    background: #dcfce7;
+}
+
+
+.off {
+
+    color: #dc2626;
+
+    background: #fee2e2;
+}
+
+
+.clear {
+
+    color: #0369a1;
+
+    background: #e0f2fe;
+}
+
+
+/* ACTIONS */
+
+.actions-section h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 14px;
+}
+
+
+.action-card {
+
+    text-decoration: none;
+
+    color: #172033;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.06);
+
+    transition: 0.2s;
+}
+
+
+.action-card:hover {
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.action-icon {
+
+    min-width: 52px;
+
+    height: 52px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.action-card strong {
+
+    font-size: 16px;
+}
+
+
+.action-card p {
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+.arrow {
+
+    margin-left: auto;
+
+    font-size: 30px;
+
+    color: #94a3b8;
+}
+
+
+/* ACTION COLORS */
+
+.blue .action-icon {
+
+    background: #dbeafe;
+}
+
+.purple .action-icon {
+
+    background: #ede9fe;
+}
+
+.green .action-icon {
+
+    background: #dcfce7;
+}
+
+.orange .action-icon {
+
+    background: #ffedd5;
+}
+
+
+/* TIP */
+
+.tip-card {
+
+    background:
+        linear-gradient(135deg, #fff7ed, #fef3c7);
+
+    border: 1px solid #fed7aa;
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    gap: 13px;
+
+    margin-top: 25px;
+}
+
+
+.tip-card > span {
+
+    font-size: 27px;
+}
+
+
+.tip-card strong {
+
+    font-size: 14px;
+}
+
+
+.tip-card p {
+
+    color: #78716c;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    padding: 5px 20px 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 15px;
+    }
+
+    .app-header {
+        padding: 20px 15px;
+    }
+
+    .app-header h1 {
+        font-size: 23px;
+    }
+
+    .welcome-card {
+        padding: 20px;
+    }
+
+    .welcome-card h2 {
+        font-size: 21px;
+    }
+
+    .robot-display {
+        font-size: 55px;
+    }
+
+}
+on {
+    color: #15803d;
+    background: #dcfce7;
+}

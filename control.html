@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Control</title>
+    <link rel="stylesheet" href="control.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Home</a>
+    <h1>🎮 Robot Control</h1>
+</header>
+
+<main>
+
+    <div class="control-panel">
+
+        <button class="up" onclick="moveRobot('FORWARD')">⬆️</button>
+
+        <div class="middle">
+            <button onclick="moveRobot('LEFT')">⬅️</button>
+
+            <button class="stop" onclick="moveRobot('STOP')">🛑</button>
+
+            <button onclick="moveRobot('RIGHT')">➡️</button>
+        </div>
+
+        <button class="down" onclick="moveRobot('BACKWARD')">⬇️</button>
+
+        <p id="direction">Robot stopped</p>
+
+    </div>
+
+</main>
+
+<script src="control.js"></script>
+
+</body>
+</html>
